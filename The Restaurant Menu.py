@@ -73,11 +73,17 @@ def saveMenu():
     """
     This function save the Menu in an external file.
     """
+    # theMenuText = printMenu(menuDic)
+    # f = open("TheMenu.txt", "w")
+    # f.write(theMenuText)
+    # f.close()
+    # print("The menu is saved as 'TheMenu.txt'")
+
     theMenuText = printMenu(menuDic)
-    f = open("TheMenu.txt", "w")
-    f.write(theMenuText)
-    f.close()
+    with open("TheMenu.txt", "w") as file:
+        file.write(theMenuText)
     print("The menu is saved as 'TheMenu.txt'")
+    # File is closed automatically thankfullly "with" statement.
 
 
 menuDic = {
